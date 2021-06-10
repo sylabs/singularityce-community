@@ -26,7 +26,7 @@ We are planning to hold a monthly community meeting via Zoom call. This will tak
 
 We will post a schedule and meeting links here shortly, and provide reminders on the Google Group and Slack.
 
-Each meeting will start with a 20 minute show and tell session, where community members are able to share software, workflows, cool containers created with our around SingularityCE. This will be followed by 35 for development discussion.
+Each meeting will start with a 20 minute show and tell session, where community members are able to share software, workflows, cool containers created with, or integrating with, SingularityCE. This will be followed by 35 minutes for development discussion.
 
 Please let us know if you'd like to take a show and tell slot!
 
