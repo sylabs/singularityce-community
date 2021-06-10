@@ -1,5 +1,8 @@
 # SingularityCE Roadmap
 
+[![hackmd-github-sync-badge](https://hackmd.io/STKv0EPDRHSHEgFSZe9fxw/badge)](https://hackmd.io/STKv0EPDRHSHEgFSZe9fxw)
+
+
 This is the roadmap document for SingularityCE (https://github.com/sylabs/singularity). SingularityCE was created in May 2021 as a fork. The first SingularityCE release was 3.8.0, on May 26th 2021.
 
 As of May 12th Sylabs has filled in some of our wishlist items for the next versions of SingularityCE, but we need your input. We'd like more of this document to have been written by you, than us!
