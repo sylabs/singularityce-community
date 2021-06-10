@@ -1,5 +1,6 @@
 # SingularityCE Community Meetings
 
+[![hackmd-github-sync-badge](https://hackmd.io/eEFaLVlbRK2_ZHP9yLz5pA/badge)](https://hackmd.io/eEFaLVlbRK2_ZHP9yLz5pA)
 
 ## 2021-05-13 4pm CDT
 
