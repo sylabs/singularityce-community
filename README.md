@@ -22,9 +22,15 @@ These are the best locations to ask about how to use Singularity, or for help wi
 We are planning to hold a monthly community meeting via Zoom call. This will take place on the 1st Thursday of each month at:
 
 * Odd numbered months: 9PM ET (US Eastern Time)
+  [Zoom Link](https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09)
 * Even numbered months: 5PM ET (US Eastern Time)
+  [Zoom Link](https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09)
 
-We will post a schedule and meeting links here shortly, and provide reminders on the Google Group and Slack.
+View the web calendar or subscribe to the iCal link for full details including call in numbers etc.
+
+* [Web Google Calendar Link](https://calendar.google.com/calendar/embed?src=c_saforbmeq46digf278419lbh1k%40group.calendar.google.com&ctz=America%2FChicago)
+* [iCal Calendar Link](https://calendar.google.com/calendar/ical/c_saforbmeq46digf278419lbh1k%40group.calendar.google.com/public/basic.ics)
+
 
 Each meeting will start with a 20 minute show and tell session, where community members are able to share software, workflows, cool containers created with, or integrating with, SingularityCE. This will be followed by 35 minutes for development discussion.
 
