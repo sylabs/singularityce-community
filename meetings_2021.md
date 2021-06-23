@@ -2,6 +2,22 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/eEFaLVlbRK2_ZHP9yLz5pA/badge)](https://hackmd.io/eEFaLVlbRK2_ZHP9yLz5pA)
 
+## 2021-07-01 9am EDT
+
+Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
+
+**This meeting will be recorded**
+
+### Agenda
+
+1. **Show and tell** (Adrian Wobito) - Adrian will present a remote builder VSCode extension, that provides def file validation, submission and monitoring of remote builds.
+2. SingularityCE development update (Dave Trudgian) - Update r.e. recent development work and status of 3.8 and master branch. Report back on the 3.7.4 security release. 
+3. SIF v2 (Adam Hughes) - Summary of ongoing work toward a v2 version of the SIF (Singularity Image Format) package, to present a tidier API and allow for further feature development.
+4. SingularityCE roadmap (All) - Review the SingularityCE roadmap and discuss priorities, with a view to assigning tasks for the next two milestones.
+5. Any other business / questions.
+
+----
+
 ## 2021-05-13 4pm CDT
 
 Zoom: https://zoom.us/j/98151144639?pwd=MENmeXkrWkx0RGdnVHJDU2dtZkZtZz09
