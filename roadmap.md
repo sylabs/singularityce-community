@@ -44,6 +44,17 @@ By default, SingularityCE runs containers far less isolated from the host than D
 https://github.com/sylabs/singularity/issues/76
 When running a multi-node application that uses Infiniband networking, the user is currently responsible for making sure that required libraries are present in the container, or bound in from the host. We should be able to discover the required libraries on the host, for automatic bind-in when the container distribution is compatible.
 
+* **Completely unprivileged mode with unprivileged fuse mounts**
+Modern linux kernels allow unprivileged fuse mounts and we should take advantage of that to avoid the need for setuid-root when possible.  In particular, the privileged mount of SIF images has long been challenged as being potentially insecure. Use squashfuse for that when possible (while allowing a system adminstrator to switch back to setuid-root mount via configuration).  In addition, use fuse-overlayfs for features such as ``--overlay`` that require overlayfs, when possible. 
+
+* **`--mount` Option (Initial Bind Support)**
+https://github.com/sylabs/singularity/issues/118
+It is not possible to use a ':' or ',' in a bind path via `-B` etc. Providing an escaping mechanism is a work-around. However, implementing a long-form `--mount` syntax, which is how Docker handles the issue, has compatibility and clarity benefits.
+
+* **Unify external binary finding**
+https://github.com/sylabs/singularity/issues/178
+We use various external binaries, and it's not always obvious how we find then. Some can be explicitly specified in `singularity.conf`, some cannot. This causes special problems for systems managed with a minimal base, and even common tools provided through module / Nix / Guix / Conda environments. System administrators in restrictive environment may also want to ensure *every* host binary called by SingularityCE can be enforced to be a specified exectuable.
+
 
 ## 4.0 Features
 
