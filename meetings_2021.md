@@ -2,6 +2,22 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/eEFaLVlbRK2_ZHP9yLz5pA/badge)](https://hackmd.io/eEFaLVlbRK2_ZHP9yLz5pA)
 
+## 2021-08-05 5pm EDT
+
+Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
+
+### Agenda
+
+**This meeting will be recorded**
+
+### Agenda
+
+1. **Show and Tell** (David Trudgian) - Demonstration of a simple tool to scan SIF containers with the Clair container vulnerability scanner. (github.com/dtrudg/clair-singularity).
+2. Singularity CE development update (Dave Trudgian) - Report back on 3.8.1 release. Update on recent development work.
+3. SIF v2 (Adam Hughes, written report) - Summary of ongoing work on the sylabs/sif package, toward a tidier v2 API, and integration for Singularity 3.9.
+4. Any other business / questions
+
+
 ## 2021-07-01 9am EDT
 
 Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
@@ -18,7 +34,7 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 
 ----
 
-## 2021-05-13 4pm CDT
+## 2021-05-13 5pm EDT
 
 Zoom: https://zoom.us/j/98151144639?pwd=MENmeXkrWkx0RGdnVHJDU2dtZkZtZz09
 
