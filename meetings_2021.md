@@ -18,6 +18,19 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 4. Any other business / questions
 
 
+### SIF Report (Adam Hughes)
+
+Work on the SIF v2 API continues. Last week, several alpha releases were published as the version 2 API started to stabilize. The API has now stabilized to the point that the first beta release has been cut. From here on, major API changes are not expected, but are still possible. 
+
+The v2 API removes an unmaintained dependency that could not be removed from the v1 API without a breaking change. In addition, the new API is much simpler and flexible, and will form an extensible base for future functionality in Singularity and related projects.
+
+It’s expected that the first stable release of the v2 API will be released in August, and will be incorporated into the Singularity 3.9 release.
+
+The v1 API will continue to see bug fixes and security updates applied for the foreseeable future. New features will be added to the V2 API, and all users are encouraged to upgrade once the first stable release is available.
+
+
+
+
 ## 2021-07-01 9am EDT
 
 Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
