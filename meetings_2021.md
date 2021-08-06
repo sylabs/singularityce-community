@@ -18,6 +18,11 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 4. Any other business / questions
 
 
+### Recording
+
+https://youtu.be/YbMlfqSK02Q
+
+
 ### SIF Report (Adam Hughes)
 
 Work on the SIF v2 API continues. Last week, several alpha releases were published as the version 2 API started to stabilize. The API has now stabilized to the point that the first beta release has been cut. From here on, major API changes are not expected, but are still possible. 
@@ -44,6 +49,10 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 3. SIF v2 (Adam Hughes) - Summary of ongoing work toward a v2 version of the SIF (Singularity Image Format) package, to present a tidier API and allow for further feature development.
 4. SingularityCE roadmap (All) - Review the SingularityCE roadmap and discuss priorities, with a view to assigning tasks for the next two milestones.
 5. Any other business / questions.
+
+### Recording
+
+https://youtu.be/2s9M8wdAYrg
 
 ----
 
