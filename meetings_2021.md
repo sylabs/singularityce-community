@@ -17,11 +17,15 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 3. SIF v2 (Adam Hughes, written report) - Summary of ongoing work on the sylabs/sif package, toward a tidier v2 API, and integration for Singularity 3.9.
 4. Any other business / questions
 
-
 ### Recording
 
 https://youtu.be/YbMlfqSK02Q
 
+### Links
+
+* Clair container scanner: https://github.com/quay/clair
+* clair-singularity: https://github.com/dtrudg/clair-singularity
+* SingularityCE 3.9.0 Milestone: https://github.com/sylabs/singularity/milestone/2
 
 ### SIF Report (Adam Hughes)
 
@@ -33,8 +37,7 @@ It’s expected that the first stable release of the v2 API will be released in 
 
 The v1 API will continue to see bug fixes and security updates applied for the foreseeable future. New features will be added to the V2 API, and all users are encouraged to upgrade once the first stable release is available.
 
-
-
+-----
 
 ## 2021-07-01 9am EDT
 
