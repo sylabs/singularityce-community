@@ -25,9 +25,9 @@ The following features *would be suitable* for a future 3.x minor version of Sin
 
 We're thinking that a 3.9 release in November 2021 is definite, but a 3.10 might be contigent on what's planned for 4.0.
 
-* **NVIDIA GPU / CUDA support via upstream tooling**
+* ~~**NVIDIA GPU / CUDA support via upstream tooling**
 https://github.com/sylabs/singularity/issues/73
-SingularityCE uses its own code to bind basic NVIDIA driver/CUDA libraries into a running container. This works well, but does not support features such as GPU masking, MIG awareness, that users of docker and the nvidia docker runtime have become accustomed to. It's proposed to switch to libnvidia-container for GPU setup to support these features, with the existing pathway as a fall-back.
+SingularityCE uses its own code to bind basic NVIDIA driver/CUDA libraries into a running container. This works well, but does not support features such as GPU masking, MIG awareness, that users of docker and the nvidia docker runtime have become accustomed to. It's proposed to switch to libnvidia-container for GPU setup to support these features, with the existing pathway as a fall-back.~~ *Experimental addition for 3.9 merged to master.*
 
 * **Non-root / Default Security Profiles**
 https://github.com/sylabs/singularity/issues/74
@@ -36,9 +36,9 @@ SingularityCE can apply security restrictions, such as `selinux` rules, `seccomp
   * Apparmor
   * Seccomp
 
-* **'Docker-like' mode**
+* ~~**'Docker-like' mode**
 https://github.com/sylabs/singularity/issues/75
-By default, SingularityCE runs containers far less isolated from the host than Docker - relying on system restrictions on the user. This is very convenient for traditional HPC-like jobs, but some Docker containers can have conflicts with files and other things that enter the container from the host. We have a number of flags such as `--contain` to work around this, but it's often unclear which are needed. A shortcut to apply the most 'docker-like', but practical configuration would be useful.
+By default, SingularityCE runs containers far less isolated from the host than Docker - relying on system restrictions on the user. This is very convenient for traditional HPC-like jobs, but some Docker containers can have conflicts with files and other things that enter the container from the host. We have a number of flags such as `--contain` to work around this, but it's often unclear which are needed. A shortcut to apply the most 'docker-like', but practical configuration would be useful.~~ *`--compat` flag merged to master for 3.9*
 
 * **Mellanox IB/OFED Library Discovery & Binding**
 https://github.com/sylabs/singularity/issues/76
@@ -51,9 +51,9 @@ Modern linux kernels allow unprivileged fuse mounts and we should take advantage
 https://github.com/sylabs/singularity/issues/118
 It is not possible to use a ':' or ',' in a bind path via `-B` etc. Providing an escaping mechanism is a work-around. However, implementing a long-form `--mount` syntax, which is how Docker handles the issue, has compatibility and clarity benefits.
 
-* **Unify external binary finding**
+* ~~**Unify external binary finding**
 https://github.com/sylabs/singularity/issues/178
-We use various external binaries, and it's not always obvious how we find then. Some can be explicitly specified in `singularity.conf`, some cannot. This causes special problems for systems managed with a minimal base, and even common tools provided through module / Nix / Guix / Conda environments. System administrators in restrictive environment may also want to ensure *every* host binary called by SingularityCE can be enforced to be a specified exectuable.
+We use various external binaries, and it's not always obvious how we find then. Some can be explicitly specified in `singularity.conf`, some cannot. This causes special problems for systems managed with a minimal base, and even common tools provided through module / Nix / Guix / Conda environments. System administrators in restrictive environment may also want to ensure *every* host binary called by SingularityCE can be enforced to be a specified exectuable.~~ *Merged to master for 3.9*
 
 
 ## 4.0 Features
