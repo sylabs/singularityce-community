@@ -2,11 +2,24 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/eEFaLVlbRK2_ZHP9yLz5pA/badge)](https://hackmd.io/eEFaLVlbRK2_ZHP9yLz5pA)
 
-## 2021-08-05 5pm EDT
+## 2021-09-02 9am EDT
 
 Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 
+**This meeting will be recorded**
+
 ### Agenda
+
+1. **Show and Tell** (Heinz Axelsson-Ekker) - Demonstration of Hinkskalle, an open-source SIF container registry that implements the library:// protocol. <https://github.com/csf-ngs/hinkskalle>.
+2. SingularityCE development update (Dave Trudgian) - Report back on 3.8.2 release. Update on development progress towards 3.9.
+3. SIF v2 (Adam Hughes) - Report back on SIF v2.0.0 and integration with SingularityCE.
+4. Any other business / questions
+
+-----
+
+## 2021-08-05 5pm EDT
+
+Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 
 **This meeting will be recorded**
 
