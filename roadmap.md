@@ -29,32 +29,35 @@ We're thinking that a 3.9 release in November 2021 is definite, but a 3.10 might
 https://github.com/sylabs/singularity/issues/73
 SingularityCE uses its own code to bind basic NVIDIA driver/CUDA libraries into a running container. This works well, but does not support features such as GPU masking, MIG awareness, that users of docker and the nvidia docker runtime have become accustomed to. It's proposed to switch to libnvidia-container for GPU setup to support these features, with the existing pathway as a fall-back.~~ *Experimental addition for 3.9 merged to master.*
 
-* **Non-root / Default Security Profiles**
-https://github.com/sylabs/singularity/issues/74
-SingularityCE can apply security restrictions, such as `selinux` rules, `seccomp` filters via a `--security` flag. However, this only works for `root`. Since SingularityCE focuse on non-root execution, it would be useful for optional/mandatory profiles to be applied to container runs for non-root users. This would allow security restrictions beyond the usual POSIX permissions to be mandated for container execution. Consider:
-  * Selinux
-  * Apparmor
-  * Seccomp
 
 * ~~**'Docker-like' mode**
 https://github.com/sylabs/singularity/issues/75
 By default, SingularityCE runs containers far less isolated from the host than Docker - relying on system restrictions on the user. This is very convenient for traditional HPC-like jobs, but some Docker containers can have conflicts with files and other things that enter the container from the host. We have a number of flags such as `--contain` to work around this, but it's often unclear which are needed. A shortcut to apply the most 'docker-like', but practical configuration would be useful.~~ *`--compat` flag merged to master for 3.9*
 
-* **Mellanox IB/OFED Library Discovery & Binding**
-https://github.com/sylabs/singularity/issues/76
-When running a multi-node application that uses Infiniband networking, the user is currently responsible for making sure that required libraries are present in the container, or bound in from the host. We should be able to discover the required libraries on the host, for automatic bind-in when the container distribution is compatible.
 
-* **Completely unprivileged mode with unprivileged fuse mounts**
-Modern linux kernels allow unprivileged fuse mounts and we should take advantage of that to avoid the need for setuid-root when possible.  In particular, the privileged mount of SIF images has long been challenged as being potentially insecure. Use squashfuse for that when possible (while allowing a system adminstrator to switch back to setuid-root mount via configuration).  In addition, use fuse-overlayfs for features such as ``--overlay`` that require overlayfs, when possible. 
-
-* **`--mount` Option (Initial Bind Support)**
+* ~~**`--mount` Option (Initial Bind Support)**
 https://github.com/sylabs/singularity/issues/118
-It is not possible to use a ':' or ',' in a bind path via `-B` etc. Providing an escaping mechanism is a work-around. However, implementing a long-form `--mount` syntax, which is how Docker handles the issue, has compatibility and clarity benefits.
+It is not possible to use a ':' or ',' in a bind path via `-B` etc. Providing an escaping mechanism is a work-around. However, implementing a long-form `--mount` syntax, which is how Docker handles the issue, has compatibility and clarity benefits.~~ *Included for 3.9*
 
 * ~~**Unify external binary finding**
 https://github.com/sylabs/singularity/issues/178
 We use various external binaries, and it's not always obvious how we find then. Some can be explicitly specified in `singularity.conf`, some cannot. This causes special problems for systems managed with a minimal base, and even common tools provided through module / Nix / Guix / Conda environments. System administrators in restrictive environment may also want to ensure *every* host binary called by SingularityCE can be enforced to be a specified exectuable.~~ *Merged to master for 3.9*
 
+
+* **Non-root / Default Security Profiles**
+https://github.com/sylabs/singularity/issues/74
+SingularityCE can apply security restrictions, such as `selinux` rules, `seccomp` filters via a `--security` flag. However, this only works for `root`. Since SingularityCE focuses on non-root execution, it would be useful for optional/mandatory profiles to be applied to container runs for non-root users. This would allow security restrictions beyond the usual POSIX permissions to be mandated for container execution. Consider:
+  * Selinux
+  * Apparmor
+  * Seccomp
+*Not yet assigned to a release milestone.*
+
+* **Completely unprivileged mode with unprivileged fuse mounts**
+Modern linux kernels allow unprivileged fuse mounts and we should take advantage of that to avoid the need for setuid-root when possible.  In particular, the privileged mount of SIF images has long been challenged as being potentially insecure. Use squashfuse for that when possible (while allowing a system adminstrator to switch back to setuid-root mount via configuration).  In addition, use fuse-overlayfs for features such as ``--overlay`` that require overlayfs, when possible. *Not yet assigned to a release milestone*
+
+* **Mellanox IB/OFED Library Discovery & Binding**
+https://github.com/sylabs/singularity/issues/76
+When running a multi-node application that uses Infiniband networking, the user is currently responsible for making sure that required libraries are present in the container, or bound in from the host. We should be able to discover the required libraries on the host, for automatic bind-in when the container distribution is compatible. *Not yet assigned to a release milestone*
 
 ## 4.0 Features
 
