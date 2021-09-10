@@ -15,6 +15,16 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 3. SIF v2 (Adam Hughes) - Report back on SIF v2.0.0 and integration with SingularityCE.
 4. Any other business / questions
 
+### Recording
+
+https://youtu.be/otmrUFSBI9I
+
+
+### Links
+
+* Hinkskalle: https://github.com/csf-ngs/hinkskalle
+* SingularityCE 3.9.0 Milestone: https://github.com/sylabs/singularity/milestone/2
+
 -----
 
 ## 2021-08-05 5pm EDT
