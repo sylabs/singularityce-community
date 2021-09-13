@@ -23,7 +23,7 @@ At least in the near future, SingularityCE will continue to have a 6-month relea
 
 The following features *would be suitable* for a future 3.x minor version of SingularityCE. These are not yet assigned to specific versions. We'd like your thoughts on how these might fit into a 3.9 / 3.10.... etc. They could also move to a 4.0 or later.
 
-We're thinking that a 3.9 release in November 2021 is definite, but a 3.10 might be contigent on what's planned for 4.0.
+We're thinking that a 3.9 release in November 2021 is definite, but a 3.10 might be contingent on what's planned for 4.0.
 
 * ~~**NVIDIA GPU / CUDA support via upstream tooling**
 https://github.com/sylabs/singularity/issues/73
@@ -41,7 +41,7 @@ It is not possible to use a ':' or ',' in a bind path via `-B` etc. Providing an
 
 * ~~**Unify external binary finding**
 https://github.com/sylabs/singularity/issues/178
-We use various external binaries, and it's not always obvious how we find then. Some can be explicitly specified in `singularity.conf`, some cannot. This causes special problems for systems managed with a minimal base, and even common tools provided through module / Nix / Guix / Conda environments. System administrators in restrictive environment may also want to ensure *every* host binary called by SingularityCE can be enforced to be a specified exectuable.~~ *Merged to master for 3.9*
+We use various external binaries, and it's not always obvious how we find then. Some can be explicitly specified in `singularity.conf`, some cannot. This causes special problems for systems managed with a minimal base, and even common tools provided through module / Nix / Guix / Conda environments. System administrators in restrictive environment may also want to ensure *every* host binary called by SingularityCE can be enforced to be a specified executable.~~ *Merged to master for 3.9*
 
 
 * **Non-root / Default Security Profiles**
@@ -53,7 +53,7 @@ SingularityCE can apply security restrictions, such as `selinux` rules, `seccomp
 *Not yet assigned to a release milestone.*
 
 * **Completely unprivileged mode with unprivileged fuse mounts**
-Modern linux kernels allow unprivileged fuse mounts and we should take advantage of that to avoid the need for setuid-root when possible.  In particular, the privileged mount of SIF images has long been challenged as being potentially insecure. Use squashfuse for that when possible (while allowing a system adminstrator to switch back to setuid-root mount via configuration).  In addition, use fuse-overlayfs for features such as ``--overlay`` that require overlayfs, when possible. *Not yet assigned to a release milestone*
+Modern linux kernels allow unprivileged fuse mounts and we should take advantage of that to avoid the need for setuid-root when possible.  In particular, the privileged mount of SIF images has long been challenged as being potentially insecure. Use squashfuse for that when possible (while allowing a system administrator to switch back to setuid-root mount via configuration).  In addition, use fuse-overlayfs for features such as ``--overlay`` that require overlayfs, when possible. *Not yet assigned to a release milestone*
 
 * **Mellanox IB/OFED Library Discovery & Binding**
 https://github.com/sylabs/singularity/issues/76
@@ -69,7 +69,7 @@ SingularityCE has a 'fakeroot engine' that is able to configure a container run 
 
 * **Consider Reworking the `remote` Command**
 https://github.com/sylabs/singularity/issues/78
-The `remote` command configures access to Sylabs cloud services, alternative keyservers, and OCI registries. It is complex as there is overlap between these targets, a concept of priorities and global/exclusive keyservers etc. This is likely a good area for a comprehensive rework.
+The `remote` command configures access to Sylabs cloud services, alternative key servers, and OCI registries. It is complex as there is overlap between these targets, a concept of priorities and global/exclusive key servers etc. This is likely a good area for a comprehensive rework.
 
 * **Overhaul `key` command**
 https://github.com/sylabs/singularity/issues/79
