@@ -2,6 +2,20 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/eEFaLVlbRK2_ZHP9yLz5pA/badge)](https://hackmd.io/eEFaLVlbRK2_ZHP9yLz5pA)
 
+## 2021-10-07 5pm EDT
+
+Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
+
+**This meeting will be recorded**
+
+### Agenda
+
+1. **Show and Tell** (Dave Trudgian) - New features coming to SingularityCE 3.9 <https://github.com/sylabs/singularity/blob/master/CHANGELOG.md>.
+2. Go version support (Adam Hughes) - Impact of Go release lifecycle on dependencies, and compatibility with distribution Go packages.
+3. SIF v2 (Adam Hughes) - Reproducible builds.
+4. Roadmap review / development updates.
+5. Any other business / questions
+
 ## 2021-09-02 9am EDT
 
 Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
