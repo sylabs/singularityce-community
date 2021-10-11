@@ -16,6 +16,19 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 4. Roadmap review / development updates.
 5. Any other business / questions
 
+### Recording
+
+https://youtu.be/8e4exA_D8Zc
+
+### Links
+
+* Upcoming 3.9 changes: https://github.com/sylabs/singularity/blob/master/CHANGELOG.md
+* Userdocs current master: https://315-364269136-gh.circle-artifacts.com/0/html/index.html
+* Admindocs current master: https://231-364269222-gh.circle-artifacts.com/0/html/index.html
+* Go version support issue: https://github.com/sylabs/singularity/issues/345
+* Named volumes issue: https://github.com/sylabs/singularity/issues/353 
+* Roadmap document: https://github.com/sylabs/singularityce-community/blob/main/roadmap.md
+
 ## 2021-09-02 9am EDT
 
 Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
