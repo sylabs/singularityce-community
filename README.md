@@ -19,12 +19,9 @@ These are the best locations to ask about how to use Singularity, or for help wi
 
 ## Community Meetings
 
-We are planning to hold a monthly community meeting via Zoom call. This will take place on the 1st Thursday of each month at:
+We hold a monthly community meeting via Zoom call. This will take place on the 1st Thursday of each month a **12 noon ET (US Eastern Time)**.
 
-* Odd numbered months: 9AM ET (US Eastern Time)
-  [Zoom Link](https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09)
-* Even numbered months: 5PM ET (US Eastern Time)
-  [Zoom Link](https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09)
+* [Zoom Link](https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09)
 
 View the web calendar or subscribe to the iCal link for full details including call in numbers etc.
 
