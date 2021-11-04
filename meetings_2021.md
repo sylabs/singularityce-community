@@ -2,6 +2,28 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/eEFaLVlbRK2_ZHP9yLz5pA/badge)](https://hackmd.io/eEFaLVlbRK2_ZHP9yLz5pA)
 
+## 2021-11-04 12 noon EDT
+
+*Note time change to 12 noon ET, first Thursday of each month*
+
+Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
+
+**This meeting will be recorded**
+
+### Agenda
+
+1. ~~**Show and Tell**~~ - _resuming next month_
+2. SingularityCE 3.9 release candidates - Updates on progress toward stable release. Appeal for testing.
+3. Roadmap review - 3.10 vs 4.0 for the next release.
+4. Any other business / questions
+
+### Links
+
+* Changelog for items during RC: https://github.com/sylabs/singularity/blob/master/CHANGELOG.md
+* 3.9.0 release milestone: https://github.com/sylabs/singularity/milestone/2
+
+-----
+
 ## 2021-10-07 5pm EDT
 
 Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
