@@ -2,6 +2,22 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/eEFaLVlbRK2_ZHP9yLz5pA/badge)](https://hackmd.io/eEFaLVlbRK2_ZHP9yLz5pA)
 
+## 2021-12-02 12 noon EDT
+
+Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
+
+**This meeting will be recorded**
+
+### Agenda
+
+1. **Show and Tell** - Working across architectures with SingularityCE and binfmt_misc. Will demonstrate building and running ARM64 containers on an AMD64 machine and vice versa.
+2. SingularityCE 3.9 release recap
+3. SingularityCE community pacakages for EL & Ubuntu
+4. Roadmap review - 3.10
+5. Any other business / questions
+
+----
+
 ## 2021-11-04 12 noon EDT
 
 *Note time change to 12 noon ET, first Thursday of each month*
@@ -16,6 +32,10 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 2. SingularityCE 3.9 release candidates - Updates on progress toward stable release. Appeal for testing.
 3. Roadmap review - 3.10 vs 4.0 for the next release.
 4. Any other business / questions
+
+### Recording
+
+https://youtu.be/sVfXbynD81o
 
 ### Links
 
