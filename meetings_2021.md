@@ -16,6 +16,9 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 4. Apptainer announcement
 5. Any other business / questions
 
+### Recording
+
+https://youtu.be/dDQqkNdvfLo
 
 ### Links
 
