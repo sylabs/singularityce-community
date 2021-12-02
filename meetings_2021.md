@@ -13,7 +13,7 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 1. **Show and Tell** - Working across architectures with SingularityCE and binfmt_misc. Will demonstrate building and running ARM64 containers on an AMD64 machine and vice versa.
 2. SingularityCE 3.9 release recap
 3. SingularityCE community pacakages for EL & Ubuntu
-4. Roadmap review - 3.10
+4. Apptainer announcement
 5. Any other business / questions
 
 ----
