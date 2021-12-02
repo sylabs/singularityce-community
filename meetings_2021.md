@@ -16,6 +16,13 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 4. Apptainer announcement
 5. Any other business / questions
 
+
+### Links
+
+* Setup Qemu user-mode emulation with a container - https://github.com/multiarch/qemu-user-static
+* Setup Qemu user-mode emulation on Debian - https://wiki.debian.org/QemuUserEmulation
+* SingularityCE 3.9.1 with EL & Ubuntu packages - https://github.com/sylabs/singularity/releases/tag/v3.9.1
+
 ----
 
 ## 2021-11-04 12 noon EDT
