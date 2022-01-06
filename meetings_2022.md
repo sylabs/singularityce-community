@@ -1,6 +1,6 @@
 # SingularityCE Community Meetings 2022
 
-[![hackmd-github-sync-badge](https://hackmd.io/eEFaLVlbRK2_ZHP9yLz5pA/badge)](https://hackmd.io/eEFaLVlbRK2_ZHP9yLz5pA)
+[![hackmd-github-sync-badge](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw/badge)](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw)
 
 ## 2022-01-06 12 noon EDT
 
