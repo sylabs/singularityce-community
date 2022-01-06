@@ -36,6 +36,7 @@ Please let us know if you'd like to take a show and tell slot!
 ### Agenda / Minutes / Recordings
 
 * Recordings of community meetings are [posted to YouTube](https://www.youtube.com/c/SylabsInc).
+* [Agenda items and minutes for 2022 meetings](meetings_2022.md) recorded via HackMD.
 * [Agenda items and minutes for 2021 meetings](meetings_2021.md) recorded via HackMD.
 
 
