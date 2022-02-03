@@ -2,6 +2,18 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw/badge)](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw)
 
+## 2022-02-03 12 noon EDT
+
+Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
+
+**Apologies** - This month's call has been shortened due to the availability of the host.
+
+1. ~~**Show and Tell** - Demonstration of new cgroups functionality under development for 3.10~~ _Postponed_
+2. SingularityCE development / roadmap update.
+3. SingularityCE / Apptainer expected compatibility.
+5. Any other business / questions.
+
+
 ## 2022-01-06 12 noon EDT
 
 Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
