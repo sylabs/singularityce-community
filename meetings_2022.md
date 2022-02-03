@@ -13,6 +13,18 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 3. SingularityCE / Apptainer expected compatibility.
 5. Any other business / questions.
 
+### Recording
+
+https://youtu.be/8CsULxKGw9M
+
+Note - the issue discussed w.r.t. a missing `run-singularity` header in Apptainer create images has been confirmed as not applying to SingularityCE.
+
+### Links
+
+* Release Notes / Changelog - https://github.com/sylabs/singularity/blob/master/CHANGELOG.md
+* Arg / Env var compatibility, quoting etc. - https://github.com/sylabs/singularity/issues/487
+
+## 2022-01-06 12 noon EDT
 
 ## 2022-01-06 12 noon EDT
 
