@@ -32,6 +32,10 @@ SingularityCE continues to use a 6-month release cycle for minor/major version b
 
 **Sylabs disclosure** - Sylabs takes each November release of SingularityCE as the basis of a commercial long-term supported SingularityPRO release. This does have some impact on decisions around the SingularityCE release timelines, but we hope that you will agree that it allows us to sustainably make valuable contributions to the project. Also, any fixes resulting from QA performed as part of this work are incoporated into SingularityCE for the benefit of the open source community.
 
+# Background Information / References
+
+Background information covering the OCI / SIF work in SingularityCE 3.10 -> 4.0 was posted to the SingularityCE Google Group, and at <https://sylabs.io/2022/02/singularityce-4-0-and-beyond>.
+
 ## 3.10 Features
 
 SingularityCE 3.10 is under development for release in May 2022. The following roadmap items are currently scheduled to be included.
@@ -45,17 +49,17 @@ https://github.com/sylabs/singularity/issues/300
 The cgroups v2 hierarchy supports delegation, and management via systemd. This can be used to implement cgroups resource limits without root permissions being required. Will benefit use of Singularity outside of a traditional batch scheduler. E.g. workflow software will be able to enforce limits directly for singularity execution of containers.
 
 * **Replace OCI engine with runc**
-Retire SingularityCE's own OCI runtime implementation, and incorporate `runc`. Initially wire up `runc` for `singularity oci` commands only. 
+Retire SingularityCE's own OCI runtime implementation, and incorporate `runc`. Initially wire up `runc` for relevant `singularity oci` commands only. Essentially, SingularityCE will perform a mount from SIF and initial spec (config.json) creating. Other portions of the oci lifecycle will then be implemented via runc. 
 
-* **Correct cgroup namespace OCI support**
+  This is the first step of the work discussed in the [SingularityCE 4.0 and Beyond article].
+
+* **Correct cgroup namespace support for OCI commangs**
 https://github.com/sylabs/singularity/issues/298
-Fix creation of the cgroup namespace that is permitted via OCI config in the OCI runtime.
-
-  This will now be achieved via OCI runtime replacement.
+Fix creation of the cgroup namespace that is permitted via OCI config in the OCI runtime. This will now be achieved via OCI runtime replacement.
 
 * **Begin Removal of Code Supporting Legacy Distros**
 https://github.com/sylabs/singularity/issues/82
-SingulartyCE contains various workarounds for RHEL6 / 2.6 kernel, old versions of invoked external programs etc. Special cases supporting these distributions can be removed gradually through 3.10 and beyond. This will reduce code and testing complexity.
+SingulartyCE contains various workarounds for the RHEL6 / 2.6 kernel, old versions of invoked external programs etc. Special cases supporting these distributions can be removed gradually through 3.10 and beyond. This will reduce code and testing complexity.
 
 * **Fully OCI/Docker compatible arg and env handling - optional config**
 https://github.com/sylabs/singularity/issues/487
@@ -64,7 +68,7 @@ Due to legacy design and implementation choices dating to Singularity 2.x, Singu
   We cannot modify this behaviour trivially to match docker, as various users exploit the current situation to blur the lines between host and container environments. We should implement a new mode that can be explicitly enabled to match the Docker / OCI behaviour exactly. This may then become the default in future versions.
   
 * **Rework fakeroot engine for nvccli compatibility**
-The hybrid fakeroot workflow creates / enters namespaces and performs container setup in an order that is not compatible with using the `nvidia-container-cli` binary for NVIDIA GPU setup. Rework the engine to permit this. May inckude removing Singularity's own subuid/gid mapping setup, to depend on the standard `newuidmap` / `newgidmap` tooling employed by other rootless runtimes, and SingularityCE in no-setuid mode.
+The hybrid fakeroot workflow creates / enters namespaces and performs container setup in an order that is not compatible with using the `nvidia-container-cli` binary for NVIDIA GPU setup. Rework the engine to permit this. May include removing Singularity's own subuid/gid mapping setup, to depend on the standard `newuidmap` / `newgidmap` tooling employed by other rootless runtimes, and SingularityCE in no-setuid mode.
 
 
 ## 3.11 Features
@@ -72,7 +76,7 @@ The hybrid fakeroot workflow creates / enters namespaces and performs container 
 SingularityCE 3.11 is targeted for release in November 2022.
 
 * **Monitor CDI / Intermediate nvidia library GPU setup support**
-NVIDIA GPU suppor for containers is moving toward the upcoming CDI (container device interface) standard. There may be an intermediate strategy. Track these changes to support current generations of NVIDIA container setup libraries / utilities.
+NVIDIA's GPU library support for containers is moving toward the upcoming CDI (container device interface) standard. There may be an intermediate strategy with a revised `nvidia-container-cli`. Track these changes to support current generations of NVIDIA container setup libraries / utilities.
 
 * **Continue Removal of Code Supporting Legacy Distros**
 https://github.com/sylabs/singularity/issues/82
@@ -82,15 +86,16 @@ SingulartyCE contains various workarounds for RHEL6 / 2.6 kernel, old versions o
 https://github.com/sylabs/singularity/issues/77
 SingularityCE has a 'fakeroot engine' that is able to configure a container run so that subuid/subgid configuration is used. This type of functionality opens the possibiity of carrying through `USER` specifications from Docker containers, so that their payload can run as the expected username.
 
-*Updated* - will now be addressed via native OCI image execution.
+  *Updated* - this will now be addressed via native OCI image execution.
 
 * **Experimental support for run/shell/exec of native OCI containers via OCI engine**
-Support execution of OCI images, in OCI native on-disk format, via runc OCI engine.
-Target support for:
+Support execution of OCI images, in OCI native on-disk format, via runc OCI engine - but with the familiar Singularity CLI.
+
+  Target support for the following subset of options/flags in 3.11.
   * `--fakeroot`
   * Bind mounts
   * Namespace requests
-  * `--env / --envifile / SINGULARITYENV_`
+  * `--env / --envfile / SINGULARITYENV_`
   * `--apply-cgroups`
   * `--rocm / --nv` (binding method)
 
@@ -101,12 +106,10 @@ Mount of singularity SquashFS SIF containers should be possible without privilig
 
 ## 4.0 Features
 
-SingularityCE 4.0 is targeted for release in Novemeber 2022.
-
-Following discussion with the community, and consideration of user priorities, Sylabs has chosen *not to* prioritize a 4.0 release of SingularityCE at this time. The following items would be limited to a future 4.0 release due to unavoidable changes to the CLI or broad runtime behaviour changes.
+SingularityCE 4.0 is targeted for release in November 2022.
 
 * **SIF Encapsulated OCI Images**
-Support encapsulation of native OCI data and configs in SIF.
+Support encapsulation of native OCI data and configs in SIF. This will permit native OCI containers (not a translation to singularity images) to benefit from the performance (metadata) and portability advantages of the SIF single file format.
   * Pull from OCI sources into OCI-SIF.
   * Push / Pull of these OCI-SIFs for library and oras destinations.
   * Execution of OCI-SIFs with OCI engine.
@@ -118,7 +121,7 @@ Cover remaining `run/shell/exec` flags/features that would make it practical for
 https://github.com/sylabs/singularity/issues/78
 The `remote` command configures access to Sylabs cloud services, alternative keyservers, and OCI registries. It is complex as there is overlap between these targets, a concept of priorities and global/exclusive keyservers etc. This is likely a good area for a comprehensive rework.
 
-* **Overhaul `key` command**
+* **Consider Overhaul of the `key` command**
 https://github.com/sylabs/singularity/issues/79
 The implementation of the `key` command has some significant technical debt, with portions of code at a different level than they should be. In addition, management of keys is not trivial for those not clear about the public/private nature, fingerprints etc. of GPG. More expressive CLI output, and re-examining of the verbs and flags would be useful.
 
@@ -137,7 +140,7 @@ A major version offers an opportunity to revise the versioning approach, so that
 * **Transition to `nvidia-container-cli` as preferred GPU setup method**
 Perform GPU setup in containers using the `--nvccli` approach by default, if `nvidia-container-cli ` is available, using legacy binding as a fall-back or explicit config option. Requires fakeroot support above.
 
-This was previously under 3.10, but has been postponed to allow tracking changes to NVIDIA's projects, and adoption of CDI (container device interface).
+  This task was previously assigned for 3.10, but has been postponed to allow tracking changes to NVIDIA's projects, and adoption of CDI (container device interface). We will monitor the situation and time the transition in order that we can capture benefits, without repeated disruptive behavior / configuration changes.
 
 ## Under Consideration
 
