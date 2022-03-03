@@ -2,7 +2,23 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw/badge)](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw)
 
-## 2022-02-03 12 noon EDT
+## 2022-03-03 12 noon ET
+
+Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
+
+**This meeting will be recorded**
+
+1. **Show and Tell** - Demonstration of using cgroups resource limits with SingularityCE, and preview of rootless cgroups under 3.10.
+2. SingularityCE roadmap update & discussion.
+3. Any other business / questions.
+
+### Links
+
+* Current cgroups documentation - https://sylabs.io/guides/master/user-guide/cgroups.html?highlight=cgroups
+* SingularityCE roadmap - https://github.com/sylabs/singularityce-community/blob/main/roadmap.md
+* SingularityCE 4.0 and beyond roadmap announcement - https://sylabs.io/2022/02/singularityce-4-0-and-beyond
+
+## 2022-02-03 12 noon ET
 
 Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 
@@ -24,9 +40,7 @@ Note - the issue discussed w.r.t. a missing `run-singularity` header in Apptaine
 * Release Notes / Changelog - https://github.com/sylabs/singularity/blob/master/CHANGELOG.md
 * Arg / Env var compatibility, quoting etc. - https://github.com/sylabs/singularity/issues/487
 
-## 2022-01-06 12 noon EDT
-
-## 2022-01-06 12 noon EDT
+## 2022-01-06 12 noon ET
 
 Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 
