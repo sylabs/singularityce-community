@@ -9,8 +9,9 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 **This meeting will be recorded**
 
 1. **Show and Tell** - Demonstration of using cgroups resource limits with SingularityCE, and preview of rootless cgroups under 3.10.
-2. SingularityCE roadmap update & discussion.
-3. Any other business / questions.
+2. SingularityCE release / development update.
+3. SingularityCE roadmap update & discussion.
+4. Any other business / questions.
 
 ### Links
 
