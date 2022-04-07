@@ -2,6 +2,25 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw/badge)](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw)
 
+## 2022-04-07 12 noon ET
+
+Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
+
+**This meeting will be recorded**
+
+1. **Show and Tell** - Demonstration of scs-build standalone remote build client tool. (Mike Frisch).
+2. Software Bill of Materials (SBOM), syft, and SIF (Adam Hughes)
+3. SingularityCE release & development update. (Dave Trudgian)
+4. Any other business / questions.
+
+### Links
+
+* scs-build article - https://sylabs.io/2022/03/introducing-scs-build
+* scs-build repository - https://github.com/sylabs/scs-build-client
+* syft SIF SBOMs - https://github.com/anchore/syft/issues/937
+
+-----
+
 ## 2022-03-03 12 noon ET
 
 Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
