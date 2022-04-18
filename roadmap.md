@@ -46,34 +46,42 @@ https://github.com/sylabs/singularity/issues/299
 
 * **Rootless cgroups v2 resource limits**
 https://github.com/sylabs/singularity/issues/300
-The cgroups v2 hierarchy supports delegation, and management via systemd. This can be used to implement cgroups resource limits without root permissions being required. Will benefit use of Singularity outside of a traditional batch scheduler. E.g. workflow software will be able to enforce limits directly for singularity execution of containers.
+~~The cgroups v2 hierarchy supports delegation, and management via systemd. This can be used to implement cgroups resource limits without root permissions being required. Will benefit use of Singularity outside of a traditional batch scheduler. E.g. workflow software will be able to enforce limits directly for singularity execution of containers.~~ Support merged.
 
 * **Replace OCI engine with runc**
-Retire SingularityCE's own OCI runtime implementation, and incorporate `runc`. Initially wire up `runc` for relevant `singularity oci` commands only. Essentially, SingularityCE will perform a mount from SIF and initial spec (config.json) creating. Other portions of the oci lifecycle will then be implemented via runc. 
+~~Retire SingularityCE's own OCI runtime implementation, and incorporate `runc`. Initially wire up `runc` for relevant `singularity oci` commands only. Essentially, SingularityCE will perform a mount from SIF and initial spec (config.json) creating. Other portions of the oci lifecycle will then be implemented via runc.~~ Merged
 
   This is the first step of the work discussed in the [SingularityCE 4.0 and Beyond article].
 
-* **Correct cgroup namespace support for OCI commangs**
+* **Correct cgroup namespace support for OCI commands**
 https://github.com/sylabs/singularity/issues/298
-Fix creation of the cgroup namespace that is permitted via OCI config in the OCI runtime. This will now be achieved via OCI runtime replacement.
+~~Fix creation of the cgroup namespace that is permitted via OCI config in the OCI runtime. This will now be achieved via OCI runtime replacement.~~ Fixed via runc.
 
 * **Begin Removal of Code Supporting Legacy Distros**
 https://github.com/sylabs/singularity/issues/82
-SingulartyCE contains various workarounds for the RHEL6 / 2.6 kernel, old versions of invoked external programs etc. Special cases supporting these distributions can be removed gradually through 3.10 and beyond. This will reduce code and testing complexity.
+~~SingulartyCE contains various workarounds for the RHEL6 / 2.6 kernel, old versions of invoked external programs etc. Special cases supporting these distributions can be removed gradually through 3.10 and beyond. This will reduce code and testing complexity.~~ Merged 3.10 changes.
 
 * **Fully OCI/Docker compatible arg and env handling - optional config**
 https://github.com/sylabs/singularity/issues/487
-Due to legacy design and implementation choices dating to Singularity 2.x, SingularityCE interprets arguments to `singularity run` differently from docker and other runtimes, performing a single level of shell evaluation. This causes some compatibility issues. In addition, environment variables perform evaluation.
+~~Due to legacy design and implementation choices dating to Singularity 2.x, SingularityCE interprets arguments to `singularity run` differently from docker and other runtimes, performing a single level of shell evaluation. This causes some compatibility issues. In addition, environment variables perform evaluation.~~ Merged.
 
   We cannot modify this behaviour trivially to match docker, as various users exploit the current situation to blur the lines between host and container environments. We should implement a new mode that can be explicitly enabled to match the Docker / OCI behaviour exactly. This may then become the default in future versions.
   
-* **Rework fakeroot engine for nvccli compatibility**
-The hybrid fakeroot workflow creates / enters namespaces and performs container setup in an order that is not compatible with using the `nvidia-container-cli` binary for NVIDIA GPU setup. Rework the engine to permit this. May include removing Singularity's own subuid/gid mapping setup, to depend on the standard `newuidmap` / `newgidmap` tooling employed by other rootless runtimes, and SingularityCE in no-setuid mode.
+* **Cgroups limits via CLI flags**
+https://github.com/sylabs/singularity/issues/717
+The Singularity CLI should support flags that allow applying cgroups resource limits directly, without needing to write a cgroups toml file. E.g. it should be possible to `singularity run --cpus 1` mycontainer.sif to limit execution to a single CPU.
+  
+* **Experimental squashfuse SIF mount support**
+https://github.com/sylabs/singularity/issues/718
+Using experimental functionality in sylabs/sif add a means to mount SIF files with squashfuse, so that they can be used without privilege, without needing to extract to a temporary sandbox directory. Implementation should be outside of the Singularity runtime engine, as it should be adaptable for mounts with the oci command group, and future plans involving using an OCI low-level runtime.
 
 
 ## 3.11 Features
 
 SingularityCE 3.11 is targeted for release in November 2022.
+
+* **Rework fakeroot engine for nvccli compatibility**
+The hybrid fakeroot workflow creates / enters namespaces and performs container setup in an order that is not compatible with using the `nvidia-container-cli` binary for NVIDIA GPU setup. Rework the engine to permit this. May include removing Singularity's own subuid/gid mapping setup, to depend on the standard `newuidmap` / `newgidmap` tooling employed by other rootless runtimes, and SingularityCE in no-setuid mode.
 
 * **Monitor CDI / Intermediate nvidia library GPU setup support**
 NVIDIA's GPU library support for containers is moving toward the upcoming CDI (container device interface) standard. There may be an intermediate strategy with a revised `nvidia-container-cli`. Track these changes to support current generations of NVIDIA container setup libraries / utilities.
@@ -101,8 +109,8 @@ Support execution of OCI images, in OCI native on-disk format, via runc OCI engi
 
   No handling of `--network`, `--security` options etc.
 
-* **Unprivileged SquashFS mount from SIF**
-Mount of singularity SquashFS SIF containers should be possible without privilige.
+* **Full support for unprivileged SquashFS mount from SIF**
+Mount of singularity SquashFS SIF containers should be possible without privilege, across the different runtime flows, `oci` command group etc.
 
 ## 4.0 Features
 
