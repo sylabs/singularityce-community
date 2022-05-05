@@ -2,6 +2,26 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw/badge)](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw)
 
+## 2022-05-05 12 noon ET
+
+Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
+
+**This meeting will be recorded**
+
+1. **Show and Tell** - Demo of new features in SingularityCE 3.10. (Dave Trudgian).
+2. Software Bill of Materials (SBOM), syft, and SIF (Adam Hughes)
+3. '%files' support coming to scs-build-client (Mike Frisch, Adam Hughes)
+4. SingularityCE release & development update. (Dave Trudgian)
+5. Any other business / questions.
+
+### Links
+
+* SingularityCE 3.10 RC1 - https://github.com/sylabs/singularity/releases/tag/v3.10.0-rc.1
+* scs-build repository - https://github.com/sylabs/scs-build-client
+* syft SIF SBOMs - https://github.com/anchore/syft/issues/937
+
+-----
+
 ## 2022-04-07 12 noon ET
 
 Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
