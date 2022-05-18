@@ -14,6 +14,10 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 4. SingularityCE release & development update. (Dave Trudgian)
 5. Any other business / questions.
 
+### Recording
+
+https://youtu.be/-zYj27E85Ac
+
 ### Links
 
 * SingularityCE 3.10 RC1 - https://github.com/sylabs/singularity/releases/tag/v3.10.0-rc.1
@@ -32,6 +36,10 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 2. Software Bill of Materials (SBOM), syft, and SIF (Adam Hughes)
 3. SingularityCE release & development update. (Dave Trudgian)
 4. Any other business / questions.
+
+### Recording
+
+https://youtu.be/Jip5n31m6KI
 
 ### Links
 
