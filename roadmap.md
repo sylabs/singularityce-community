@@ -4,7 +4,6 @@
 
 - [Introduction](#Introduction)
 - [Development Cycle](#Development-Cycle)
-- [3.10 Features](#3.10-Features)
 - [3.11 Features](#3.11-Features)
 - [4.0 Features](#4.0-Features)
 - [Under Consideration](#Under-Consideration) 
@@ -18,7 +17,7 @@ SingularityCE was created in May 2021 as a fork from the (then) hpcng/singularit
 
 The first SingularityCE release was 3.8.0, on May 26th 2021.
 
-The current SingularityCE release is 3.9.5, on Feb 4th 2021.
+The current SingularityCE release is 3.10.0, on May 17th 2022.
 
 This roadmap is regularly curated by Sylabs, but is open for edits by anyone! You can [create feature request issues](https://https://github.com/sylabs/singularity/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=) on the GitHub repository, or comment/edit the document here (use the HackMD button).
 
@@ -35,45 +34,6 @@ SingularityCE continues to use a 6-month release cycle for minor/major version b
 # Background Information / References
 
 Background information covering the OCI / SIF work in SingularityCE 3.10 -> 4.0 was posted to the SingularityCE Google Group, and at <https://sylabs.io/2022/02/singularityce-4-0-and-beyond>.
-
-## 3.10 Features
-
-SingularityCE 3.10 is under development for release in May 2022. The following roadmap items are currently scheduled to be included.
-
-* ~~**SystemD as cgroups manager**~~
-https://github.com/sylabs/singularity/issues/299
-~~systemd is the default init for all of our target distributions, and with cgroups v2 it would be useful to use it for cgroups management. This would allow cgroups applied to containers to fit neatly into the user slice / session scopes in the systemd managed v2 hierarchy.~~ Support merged.
-
-* **Rootless cgroups v2 resource limits**
-https://github.com/sylabs/singularity/issues/300
-~~The cgroups v2 hierarchy supports delegation, and management via systemd. This can be used to implement cgroups resource limits without root permissions being required. Will benefit use of Singularity outside of a traditional batch scheduler. E.g. workflow software will be able to enforce limits directly for singularity execution of containers.~~ Support merged.
-
-* **Replace OCI engine with runc**
-~~Retire SingularityCE's own OCI runtime implementation, and incorporate `runc`. Initially wire up `runc` for relevant `singularity oci` commands only. Essentially, SingularityCE will perform a mount from SIF and initial spec (config.json) creating. Other portions of the oci lifecycle will then be implemented via runc.~~ Merged
-
-  This is the first step of the work discussed in the [SingularityCE 4.0 and Beyond article].
-
-* **Correct cgroup namespace support for OCI commands**
-https://github.com/sylabs/singularity/issues/298
-~~Fix creation of the cgroup namespace that is permitted via OCI config in the OCI runtime. This will now be achieved via OCI runtime replacement.~~ Fixed via runc.
-
-* **Begin Removal of Code Supporting Legacy Distros**
-https://github.com/sylabs/singularity/issues/82
-~~SingulartyCE contains various workarounds for the RHEL6 / 2.6 kernel, old versions of invoked external programs etc. Special cases supporting these distributions can be removed gradually through 3.10 and beyond. This will reduce code and testing complexity.~~ Merged 3.10 changes.
-
-* **Fully OCI/Docker compatible arg and env handling - optional config**
-https://github.com/sylabs/singularity/issues/487
-~~Due to legacy design and implementation choices dating to Singularity 2.x, SingularityCE interprets arguments to `singularity run` differently from docker and other runtimes, performing a single level of shell evaluation. This causes some compatibility issues. In addition, environment variables perform evaluation.~~ Merged.
-
-  We cannot modify this behaviour trivially to match docker, as various users exploit the current situation to blur the lines between host and container environments. We should implement a new mode that can be explicitly enabled to match the Docker / OCI behaviour exactly. This may then become the default in future versions.
-  
-* **Cgroups limits via CLI flags**
-https://github.com/sylabs/singularity/issues/717
-The Singularity CLI should support flags that allow applying cgroups resource limits directly, without needing to write a cgroups toml file. E.g. it should be possible to `singularity run --cpus 1` mycontainer.sif to limit execution to a single CPU.
-  
-* **Experimental squashfuse SIF mount support**
-https://github.com/sylabs/singularity/issues/718
-Using experimental functionality in sylabs/sif add a means to mount SIF files with squashfuse, so that they can be used without privilege, without needing to extract to a temporary sandbox directory. Implementation should be outside of the Singularity runtime engine, as it should be adaptable for mounts with the oci command group, and future plans involving using an OCI low-level runtime.
 
 
 ## 3.11 Features
@@ -111,6 +71,8 @@ Support execution of OCI images, in OCI native on-disk format, via runc OCI engi
 
 * **Full support for unprivileged SquashFS mount from SIF**
 Mount of singularity SquashFS SIF containers should be possible without privilege, across the different runtime flows, `oci` command group etc.
+
+* **Instance Stats** - Enable monitoring of instance resource usage via cgroups. Initial work by vsoch has been done at https://github.com/sylabs/singularity/pull/784. Remaining tasks to make this more broadly applicable at https://github.com/sylabs/singularity/issues/785
 
 ## 4.0 Features
 
@@ -213,3 +175,42 @@ We use various external binaries, and it's not always obvious how we find then. 
 * ~~**cgroups v2 support**
 https://github.com/sylabs/singularity/issues/60
 Provide initial support for cgroups v2 unified hierarchy.~~
+
+## 3.10 Features
+
+SingularityCE 3.10 is under development for release in May 2022. The following roadmap items are currently scheduled to be included.
+
+* ~~**SystemD as cgroups manager**~~
+https://github.com/sylabs/singularity/issues/299
+~~systemd is the default init for all of our target distributions, and with cgroups v2 it would be useful to use it for cgroups management. This would allow cgroups applied to containers to fit neatly into the user slice / session scopes in the systemd managed v2 hierarchy.~~ Support merged.
+
+* **Rootless cgroups v2 resource limits**
+https://github.com/sylabs/singularity/issues/300
+~~The cgroups v2 hierarchy supports delegation, and management via systemd. This can be used to implement cgroups resource limits without root permissions being required. Will benefit use of Singularity outside of a traditional batch scheduler. E.g. workflow software will be able to enforce limits directly for singularity execution of containers.~~ Support merged.
+
+* **Replace OCI engine with runc**
+~~Retire SingularityCE's own OCI runtime implementation, and incorporate `runc`. Initially wire up `runc` for relevant `singularity oci` commands only. Essentially, SingularityCE will perform a mount from SIF and initial spec (config.json) creating. Other portions of the oci lifecycle will then be implemented via runc.~~ Merged
+
+  This is the first step of the work discussed in the [SingularityCE 4.0 and Beyond article].
+
+* **Correct cgroup namespace support for OCI commands**
+https://github.com/sylabs/singularity/issues/298
+~~Fix creation of the cgroup namespace that is permitted via OCI config in the OCI runtime. This will now be achieved via OCI runtime replacement.~~ Fixed via runc.
+
+* **Begin Removal of Code Supporting Legacy Distros**
+https://github.com/sylabs/singularity/issues/82
+~~SingulartyCE contains various workarounds for the RHEL6 / 2.6 kernel, old versions of invoked external programs etc. Special cases supporting these distributions can be removed gradually through 3.10 and beyond. This will reduce code and testing complexity.~~ Merged 3.10 changes.
+
+* **Fully OCI/Docker compatible arg and env handling - optional config**
+https://github.com/sylabs/singularity/issues/487
+~~Due to legacy design and implementation choices dating to Singularity 2.x, SingularityCE interprets arguments to `singularity run` differently from docker and other runtimes, performing a single level of shell evaluation. This causes some compatibility issues. In addition, environment variables perform evaluation.~~ Merged.
+
+  We cannot modify this behaviour trivially to match docker, as various users exploit the current situation to blur the lines between host and container environments. We should implement a new mode that can be explicitly enabled to match the Docker / OCI behaviour exactly. This may then become the default in future versions.
+  
+* **Cgroups limits via CLI flags**
+https://github.com/sylabs/singularity/issues/717
+~~The Singularity CLI should support flags that allow applying cgroups resource limits directly, without needing to write a cgroups toml file. E.g. it should be possible to `singularity run --cpus 1` mycontainer.sif to limit execution to a single CPU.~~ Merged.
+  
+* **Experimental squashfuse SIF mount support**
+https://github.com/sylabs/singularity/issues/718
+~~Using experimental functionality in sylabs/sif add a means to mount SIF files with squashfuse, so that they can be used without privilege, without needing to extract to a temporary sandbox directory. Implementation should be outside of the Singularity runtime engine, as it should be adaptable for mounts with the oci command group, and future plans involving using an OCI low-level runtime.~~ Merged.
