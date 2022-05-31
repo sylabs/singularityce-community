@@ -2,6 +2,12 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw/badge)](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw)
 
+## 2022-06-09 12 noon ET
+
+**Postponed by 1 week due to overlap with ISC HPC Containers Workshop**
+
+Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
+
 ## 2022-05-05 12 noon ET
 
 Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
