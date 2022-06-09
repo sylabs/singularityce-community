@@ -8,6 +8,15 @@
 
 Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 
+**This meeting will be recorded**
+
+1. **Demo** - `%files` support for remote builds in SingularityCE 3.10.
+2. Summary of SingularityCE content presented at ISC HPC Containers Workshop.
+3. SingularityCE release & development update.
+4. Any other business / questions.
+
+-----
+
 ## 2022-05-05 12 noon ET
 
 Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
