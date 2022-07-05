@@ -2,6 +2,26 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw/badge)](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw)
 
+## 2022-07-07 12 noon ET
+
+Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
+
+**This meeting will be recorded**
+
+1. **Demo** - singularity-hpc (by @vsoch). Singularity HPC is optimized for managing containers in an HPC environment. You can use shpc if you are:
+    * a linux administrator wanting to manage containers as modules for your cluster
+    * a cluster user that wants to maintain your own folder of custom modules
+    * a cluster user that simply wants to pull Singularity images as GitHub packages.
+2. SingularityCE release & development update.
+3. Any other business / questions.
+
+### Links
+
+* singularity-hpc - https://github.com/singularityhub/singularity-hpc
+* SingularityCE roadmap - https://github.com/sylabs/singularityce-community/blob/main/roadmap.md
+
+-----
+
 ## 2022-06-09 12 noon ET
 
 **Postponed by 1 week due to overlap with ISC HPC Containers Workshop**
@@ -14,6 +34,8 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 2. Summary of SingularityCE content presented at ISC HPC Containers Workshop.
 3. SingularityCE release & development update.
 4. Any other business / questions.
+
+### Recording
 
 -----
 
