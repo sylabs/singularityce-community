@@ -15,10 +15,18 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 2. SingularityCE release & development update.
 3. Any other business / questions.
 
+### Recording
+
+https://youtu.be/T2VFg4mSSxQ
+
+
 ### Links
 
 * singularity-hpc - https://github.com/singularityhub/singularity-hpc
+* Latest changelog - https://github.com/sylabs/singularity/blob/main/CHANGELOG.md
+* Incoming PRs - https://github.com/sylabs/singularity/pulls
 * SingularityCE roadmap - https://github.com/sylabs/singularityce-community/blob/main/roadmap.md
+* 4.0 and beyond overview - https://sylabs.io/2022/02/singularityce-4-0-and-beyond/
 
 -----
 
