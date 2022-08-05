@@ -2,6 +2,32 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw/badge)](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw)
 
+## 2022-08-04 12 noon ET
+
+Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
+
+**This meeting will be recorded**
+
+1. **Demo** - SBOMs and vulnerability scanning of Singularity containers with Syft and Grype.
+2. SingularityCE release & development update.
+3. Any other business / questions.
+
+### Recording
+
+https://youtu.be/k_BCNbnaxrw
+
+
+### Links
+
+* Syft & Grype How To - https://sylabs.io/2022/08/how-to-vulnerability-scanning-of-singularity-containers-with-syft-and-grype/
+* Syft - https://github.com/anchore/syft
+* Grype - https://github.com/anchore/grype
+* Latest changelog - https://github.com/sylabs/singularity/blob/main/CHANGELOG.md
+* Incoming PRs - https://github.com/sylabs/singularity/pulls
+* SingularityCE roadmap - https://github.com/sylabs/singularityce-community/blob/main/roadmap.md
+
+-----
+
 ## 2022-07-07 12 noon ET
 
 Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
