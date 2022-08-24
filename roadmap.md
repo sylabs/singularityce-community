@@ -76,7 +76,7 @@ Mount of singularity SquashFS SIF containers should be possible without privileg
 
 ## 4.0 Features
 
-SingularityCE 4.0 is targeted for release in November 2022.
+SingularityCE 4.0 is targeted for release in May 2022.
 
 * **SIF Encapsulated OCI Images**
 Support encapsulation of native OCI data and configs in SIF. This will permit native OCI containers (not a translation to singularity images) to benefit from the performance (metadata) and portability advantages of the SIF single file format.
