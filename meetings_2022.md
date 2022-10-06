@@ -9,8 +9,9 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 **This meeting will be recorded**
 
 1. **Demo** - Syft attest support for SIF container images.
-2. SingularityCE release & development update.
-3. Any other business / questions.
+2. SIF GHSA / SingularityCE 3.10.3 security release.
+3. SingularityCE development update.
+4. Any other business / questions.
 
 ### Recording
 
