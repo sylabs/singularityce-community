@@ -16,6 +16,7 @@ Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
 
 ### Recording
 
+https://youtu.be/NOfTTO16Y3Q
 
 ### Links
 
