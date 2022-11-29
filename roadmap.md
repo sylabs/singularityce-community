@@ -74,6 +74,8 @@ Mount of singularity SquashFS SIF containers should be possible without privileg
 
 * **Instance Stats** - Enable monitoring of instance resource usage via cgroups. Initial work by vsoch has been done at https://github.com/sylabs/singularity/pull/784. Remaining tasks to make this more broadly applicable at https://github.com/sylabs/singularity/issues/785
 
+* **PEM / x509 signing & verification** - Allow containers to be signed and verified using PEM keypairs, and x509 certificates. See https://github.com/sylabs/singularity/issues/1095
+
 ## 4.0 Features
 
 SingularityCE 4.0 is targeted for release in May 2022.
