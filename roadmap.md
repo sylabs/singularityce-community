@@ -17,7 +17,7 @@ SingularityCE was created in May 2021 as a fork from the (then) hpcng/singularit
 
 The first SingularityCE release was 3.8.0, on May 26th 2021.
 
-The current SingularityCE release is 3.10.0, on May 17th 2022.
+The current SingularityCE release is 3.10.4, on Nov 10th 2022.
 
 This roadmap is regularly curated by Sylabs, but is open for edits by anyone! You can [create feature request issues](https://https://github.com/sylabs/singularity/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=) on the GitHub repository, or comment/edit the document here (use the HackMD button).
 
@@ -43,12 +43,12 @@ SingularityCE 3.11 is targeted for release in November 2022.
 * **Rework fakeroot engine for nvccli compatibility**
 The hybrid fakeroot workflow creates / enters namespaces and performs container setup in an order that is not compatible with using the `nvidia-container-cli` binary for NVIDIA GPU setup. Rework the engine to permit this. May include removing Singularity's own subuid/gid mapping setup, to depend on the standard `newuidmap` / `newgidmap` tooling employed by other rootless runtimes, and SingularityCE in no-setuid mode.
 
-* **Monitor CDI / Intermediate nvidia library GPU setup support**
-NVIDIA's GPU library support for containers is moving toward the upcoming CDI (container device interface) standard. There may be an intermediate strategy with a revised `nvidia-container-cli`. Track these changes to support current generations of NVIDIA container setup libraries / utilities.
+* ~~**Monitor CDI / Intermediate nvidia library GPU setup support**
+NVIDIA's GPU library support for containers is moving toward the upcoming CDI (container device interface) standard. There may be an intermediate strategy with a revised `nvidia-container-cli`. Track these changes to support current generations of NVIDIA container setup libraries / utilities.~~ As of Nov, no action needed for 3.11.
 
 * **Continue Removal of Code Supporting Legacy Distros**
-https://github.com/sylabs/singularity/issues/82
-SingulartyCE contains various workarounds for RHEL6 / 2.6 kernel, old versions of invoked external programs etc. Special cases supporting these distributions can be removed gradually through 3.10 and beyond. This will reduce code and testing complexity.
+~~https://github.com/sylabs/singularity/issues/82
+SingulartyCE contains various workarounds for RHEL6 / 2.6 kernel, old versions of invoked external programs etc. Special cases supporting these distributions can be removed gradually through 3.10 and beyond. This will reduce code and testing complexity.~~ Completed for 3.11
 
 * **Support for Dockerfile USER**
 https://github.com/sylabs/singularity/issues/77
@@ -75,6 +75,10 @@ Mount of singularity SquashFS SIF containers should be possible without privileg
 * **Instance Stats** - Enable monitoring of instance resource usage via cgroups. Initial work by vsoch has been done at https://github.com/sylabs/singularity/pull/784. Remaining tasks to make this more broadly applicable at https://github.com/sylabs/singularity/issues/785
 
 * **PEM / x509 signing & verification** - Allow containers to be signed and verified using PEM keypairs, and x509 certificates. See https://github.com/sylabs/singularity/issues/1095
+
+* ~~**proot facilitated non-root builds** - When a user does not have a subuid/subgid mapping, allow a `singularity build` to run unprivileged with `proot` providing root user emulation.~~ Merged.
+
+* ~~**Support for kernel unprivileged overlay mount** - use overlay instead of underlay, allow writable-tmpfs, directory overlay unprivileged, where unpriv overlay supported by the kernel.~~ Merged.
 
 ## 4.0 Features
 
