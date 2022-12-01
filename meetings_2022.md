@@ -2,6 +2,31 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw/badge)](https://hackmd.io/RdiB9hOBRk66H3ymPWbXaw)
 
+## 2022-12-01 12 noon ET
+
+Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
+
+**This meeting will be recorded**
+
+1. SIF - Signing / verification with PEM / x509.
+2. SingularityCE Packaging - Fedora / EPEL.
+3. SingularityCE OCI runtime mode - Brief Demo.
+4. Other development updates.
+5. Any other business / questions.
+
+### Recording
+
+
+### Links
+
+* x509 singing/verification issue - https://github.com/sylabs/singularity/issues/1095
+* SingularityCE in EPEL testing - https://groups.google.com/g/singularity-ce/c/UloP1zoIJ8U
+* Latest changelog - https://github.com/sylabs/singularity/blob/main/CHANGELOG.md
+* Incoming PRs - https://github.com/sylabs/singularity/pulls
+* SingularityCE roadmap - https://github.com/sylabs/singularityce-community/blob/main/roadmap.md
+
+-----
+
 ## 2022-11-03 12 noon ET
 
 Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
