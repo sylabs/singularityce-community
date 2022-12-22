@@ -4,8 +4,8 @@
 
 - [Introduction](#Introduction)
 - [Development Cycle](#Development-Cycle)
-- [3.11 Features](#3.11-Features)
-- [4.0 Features](#4.0-Features)
+- [3.11 Features](#311-Features)
+- [4.0 Features](#40-Features)
 - [Under Consideration](#Under-Consideration) 
 - [Archived Roadmap](#Archived-Roadmap)
 
@@ -40,8 +40,6 @@ Background information covering the OCI / SIF work in SingularityCE 3.10 -> 4.0 
 
 SingularityCE 3.11 is targeted for release in November 2022.
 
-* **Rework fakeroot engine for nvccli compatibility**
-The hybrid fakeroot workflow creates / enters namespaces and performs container setup in an order that is not compatible with using the `nvidia-container-cli` binary for NVIDIA GPU setup. Rework the engine to permit this. May include removing Singularity's own subuid/gid mapping setup, to depend on the standard `newuidmap` / `newgidmap` tooling employed by other rootless runtimes, and SingularityCE in no-setuid mode.
 
 * ~~**Monitor CDI / Intermediate nvidia library GPU setup support**
 NVIDIA's GPU library support for containers is moving toward the upcoming CDI (container device interface) standard. There may be an intermediate strategy with a revised `nvidia-container-cli`. Track these changes to support current generations of NVIDIA container setup libraries / utilities.~~ As of Nov, no action needed for 3.11.
@@ -56,15 +54,15 @@ SingularityCE has a 'fakeroot engine' that is able to configure a container run 
 
   *Updated* - this will now be addressed via native OCI image execution.
 
-* **Experimental support for run/shell/exec of native OCI containers via OCI engine**
-Support execution of OCI images, in OCI native on-disk format, via runc OCI engine - but with the familiar Singularity CLI.
+* ~~**Experimental support for run/shell/exec of native OCI containers via OCI engine**
+Support execution of OCI images, in OCI native on-disk format, via runc OCI engine - but with the familiar Singularity CLI.~~ Merged.
 
   Target support for the following subset of options/flags in 3.11.
   * `--fakeroot`
   * Bind mounts
   * Namespace requests
   * `--env / --envfile / SINGULARITYENV_`
-  * `--apply-cgroups`
+  * `--apply-cgroups` / resource limit flags.
   * `--rocm / --nv` (binding method)
 
   No handling of `--network`, `--security` options etc.
@@ -72,9 +70,9 @@ Support execution of OCI images, in OCI native on-disk format, via runc OCI engi
 * **Full support for unprivileged SquashFS mount from SIF**
 Mount of singularity SquashFS SIF containers should be possible without privilege, across the different runtime flows, `oci` command group etc.
 
-* **Instance Stats** - Enable monitoring of instance resource usage via cgroups. Initial work by vsoch has been done at https://github.com/sylabs/singularity/pull/784. Remaining tasks to make this more broadly applicable at https://github.com/sylabs/singularity/issues/785
+* ~~**Instance Stats** - Enable monitoring of instance resource usage via cgroups. Initial work by vsoch has been done at https://github.com/sylabs/singularity/pull/784. Remaining tasks to make this more broadly applicable at https://github.com/sylabs/singularity/issues/785~~ Merged.
 
-* **PEM / x509 signing & verification** - Allow containers to be signed and verified using PEM keypairs, and x509 certificates. See https://github.com/sylabs/singularity/issues/1095
+* ~~**PEM / x509 signing & verification** - Allow containers to be signed and verified using PEM keypairs, and x509 certificates. See https://github.com/sylabs/singularity/issues/1095~~ Merged.
 
 * ~~**proot facilitated non-root builds** - When a user does not have a subuid/subgid mapping, allow a `singularity build` to run unprivileged with `proot` providing root user emulation.~~ Merged.
 
@@ -117,6 +115,9 @@ A major version offers an opportunity to revise the versioning approach, so that
 Perform GPU setup in containers using the `--nvccli` approach by default, if `nvidia-container-cli ` is available, using legacy binding as a fall-back or explicit config option. Requires fakeroot support above.
 
   This task was previously assigned for 3.10, but has been postponed to allow tracking changes to NVIDIA's projects, and adoption of CDI (container device interface). We will monitor the situation and time the transition in order that we can capture benefits, without repeated disruptive behavior / configuration changes.
+
+* **Rework fakeroot engine for nvccli compatibility**
+The hybrid fakeroot workflow creates / enters namespaces and performs container setup in an order that is not compatible with using the `nvidia-container-cli` binary for NVIDIA GPU setup. Rework the engine to permit this. May include removing Singularity's own subuid/gid mapping setup, to depend on the standard `newuidmap` / `newgidmap` tooling employed by other rootless runtimes, and SingularityCE in no-setuid mode.
 
 ## Under Consideration
 
