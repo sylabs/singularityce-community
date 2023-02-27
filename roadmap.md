@@ -4,7 +4,6 @@
 
 - [Introduction](#Introduction)
 - [Development Cycle](#Development-Cycle)
-- [3.11 Features](#311-Features)
 - [4.0 Features](#40-Features)
 - [Under Consideration](#Under-Consideration) 
 - [Archived Roadmap](#Archived-Roadmap)
@@ -36,51 +35,9 @@ SingularityCE continues to use a 6-month release cycle for minor/major version b
 Background information covering the OCI / SIF work in SingularityCE 3.10 -> 4.0 was posted to the SingularityCE Google Group, and at <https://sylabs.io/2022/02/singularityce-4-0-and-beyond>.
 
 
-## 3.11 Features
-
-SingularityCE 3.11 is targeted for release in November 2022.
-
-
-* ~~**Monitor CDI / Intermediate nvidia library GPU setup support**
-NVIDIA's GPU library support for containers is moving toward the upcoming CDI (container device interface) standard. There may be an intermediate strategy with a revised `nvidia-container-cli`. Track these changes to support current generations of NVIDIA container setup libraries / utilities.~~ As of Nov, no action needed for 3.11.
-
-* **Continue Removal of Code Supporting Legacy Distros**
-~~https://github.com/sylabs/singularity/issues/82
-SingulartyCE contains various workarounds for RHEL6 / 2.6 kernel, old versions of invoked external programs etc. Special cases supporting these distributions can be removed gradually through 3.10 and beyond. This will reduce code and testing complexity.~~ Completed for 3.11
-
-* **Support for Dockerfile USER**
-https://github.com/sylabs/singularity/issues/77
-SingularityCE has a 'fakeroot engine' that is able to configure a container run so that subuid/subgid configuration is used. This type of functionality opens the possibiity of carrying through `USER` specifications from Docker containers, so that their payload can run as the expected username.
-
-  *Updated* - this will now be addressed via native OCI image execution.
-
-* ~~**Experimental support for run/shell/exec of native OCI containers via OCI engine**
-Support execution of OCI images, in OCI native on-disk format, via runc OCI engine - but with the familiar Singularity CLI.~~ Merged.
-
-  Target support for the following subset of options/flags in 3.11.
-  * `--fakeroot`
-  * Bind mounts
-  * Namespace requests
-  * `--env / --envfile / SINGULARITYENV_`
-  * `--apply-cgroups` / resource limit flags.
-  * `--rocm / --nv` (binding method)
-
-  No handling of `--network`, `--security` options etc.
-
-* **Full support for unprivileged SquashFS mount from SIF**
-Mount of singularity SquashFS SIF containers should be possible without privilege, across the different runtime flows, `oci` command group etc.
-
-* ~~**Instance Stats** - Enable monitoring of instance resource usage via cgroups. Initial work by vsoch has been done at https://github.com/sylabs/singularity/pull/784. Remaining tasks to make this more broadly applicable at https://github.com/sylabs/singularity/issues/785~~ Merged.
-
-* ~~**PEM / x509 signing & verification** - Allow containers to be signed and verified using PEM keypairs, and x509 certificates. See https://github.com/sylabs/singularity/issues/1095~~ Merged.
-
-* ~~**proot facilitated non-root builds** - When a user does not have a subuid/subgid mapping, allow a `singularity build` to run unprivileged with `proot` providing root user emulation.~~ Merged.
-
-* ~~**Support for kernel unprivileged overlay mount** - use overlay instead of underlay, allow writable-tmpfs, directory overlay unprivileged, where unpriv overlay supported by the kernel.~~ Merged.
-
 ## 4.0 Features
 
-SingularityCE 4.0 is targeted for release in May 2022.
+SingularityCE 4.0 is targeted for release in May-June 2022.
 
 * **SIF Encapsulated OCI Images**
 Support encapsulation of native OCI data and configs in SIF. This will permit native OCI containers (not a translation to singularity images) to benefit from the performance (metadata) and portability advantages of the SIF single file format.
@@ -111,10 +68,10 @@ Various portions of code in public `pkg/` areas still use `internal/` packages. 
 https://github.com/sylabs/singularity/issues/81
 A major version offers an opportunity to revise the versioning approach, so that SingularityCE `pkg/` code can be called from other projects as expected of a go module.
 
-* **Transition to `nvidia-container-cli` as preferred GPU setup method**
+* **Transition to `nvidia-container-cli` / CDI as preferred GPU setup method**
 Perform GPU setup in containers using the `--nvccli` approach by default, if `nvidia-container-cli ` is available, using legacy binding as a fall-back or explicit config option. Requires fakeroot support above.
 
-  This task was previously assigned for 3.10, but has been postponed to allow tracking changes to NVIDIA's projects, and adoption of CDI (container device interface). We will monitor the situation and time the transition in order that we can capture benefits, without repeated disruptive behavior / configuration changes.
+ This task was previously assigned for 3.10, but has been postponed to allow tracking changes to NVIDIA's projects, and adoption of CDI (container device interface). We will monitor the situation and time the transition in order that we can capture benefits, without repeated disruptive behavior / configuration changes.
 
 * **Rework fakeroot engine for nvccli compatibility**
 The hybrid fakeroot workflow creates / enters namespaces and performs container setup in an order that is not compatible with using the `nvidia-container-cli` binary for NVIDIA GPU setup. Rework the engine to permit this. May include removing Singularity's own subuid/gid mapping setup, to depend on the standard `newuidmap` / `newgidmap` tooling employed by other rootless runtimes, and SingularityCE in no-setuid mode.
@@ -156,6 +113,44 @@ When running a multi-node application that uses Infiniband networking, the user 
 ## Archived Roadmap
 
 Features implemented in previous releases.
+
+## 3.11 Features
+
+SingularityCE 3.11 is was released in February 2023.
+
+
+* ~~**Monitor CDI / Intermediate nvidia library GPU setup support**
+NVIDIA's GPU library support for containers is moving toward the upcoming CDI (container device interface) standard. There may be an intermediate strategy with a revised `nvidia-container-cli`. Track these changes to support current generations of NVIDIA container setup libraries / utilities.~~ As of Nov, no action needed for 3.11.
+
+* **Continue Removal of Code Supporting Legacy Distros**
+~~https://github.com/sylabs/singularity/issues/82
+SingulartyCE contains various workarounds for RHEL6 / 2.6 kernel, old versions of invoked external programs etc. Special cases supporting these distributions can be removed gradually through 3.10 and beyond. This will reduce code and testing complexity.~~ Completed for 3.11
+
+* **Support for Dockerfile USER**
+~~https://github.com/sylabs/singularity/issues/77
+SingularityCE has a 'fakeroot engine' that is able to configure a container run so that subuid/subgid configuration is used. This type of functionality opens the possibiity of carrying through `USER` specifications from Docker containers, so that their payload can run as the expected username.   *Updated* - this will now be addressed via native OCI image execution.~~
+
+
+* ~~**Experimental support for run/shell/exec of native OCI containers via OCI engine**
+Support execution of OCI images, in OCI native on-disk format, via runc OCI engine - but with the familiar Singularity CLI.~~ Merged.
+
+  Target support for the following subset of options/flags in 3.11.
+  * `--fakeroot`
+  * Bind mounts
+  * Namespace requests
+  * `--env / --envfile / SINGULARITYENV_`
+  * `--apply-cgroups` / resource limit flags.
+  * `--rocm / --nv` (binding method)
+
+  No handling of `--network`, `--security` options etc.
+
+* ~~**Instance Stats** - Enable monitoring of instance resource usage via cgroups. Initial work by vsoch has been done at https://github.com/sylabs/singularity/pull/784. Remaining tasks to make this more broadly applicable at https://github.com/sylabs/singularity/issues/785~~ Merged.
+
+* ~~**PEM / x509 signing & verification** - Allow containers to be signed and verified using PEM keypairs, and x509 certificates. See https://github.com/sylabs/singularity/issues/1095~~ Merged.
+
+* ~~**proot facilitated non-root builds** - When a user does not have a subuid/subgid mapping, allow a `singularity build` to run unprivileged with `proot` providing root user emulation.~~ Merged.
+
+* ~~**Support for kernel unprivileged overlay mount** - use overlay instead of underlay, allow writable-tmpfs, directory overlay unprivileged, where unpriv overlay supported by the kernel.~~ Merged.
 
 ### 3.9 Features
 
