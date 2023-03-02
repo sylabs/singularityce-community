@@ -1,4 +1,4 @@
-# SingularityCE Community Meetings 2022
+# SingularityCE Community Meetings 2023
 
 [![hackmd-github-sync-badge](https://hackmd.io/-EXJh1x7TvqCdRnmHIj_dA/badge)](https://hackmd.io/-EXJh1x7TvqCdRnmHIj_dA)
 
