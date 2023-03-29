@@ -48,6 +48,10 @@ Support encapsulation of native OCI data and configs in SIF. This will permit na
 * **Mainstream execution of native singularity images through OCI runtime**
 Cover remaining `run/shell/exec` flags/features that would make it practical for majority of users to switch between singularity's native runtime, and the OCI runtime, for execution of native singularity images (not encapsulated OCI).
 
+* **Container Device Interface Support**
+Support setup of NVIDIA, Intel GPUs and other devices using CDI - the [Container Device Interface](https://github.com/container-orchestrated-devices/container-device-interface). CDI will be the preferred GPU integration for `--oci` mode, and considered for support with the native singularity runtime. Co-ordinated with / collaborating with NVIDIA - <https://github.com/sylabs/singularity/issues/1394>
+
+
 * **Consider Reworking the `remote` Command**
 https://github.com/sylabs/singularity/issues/78
 The `remote` command configures access to Sylabs cloud services, alternative keyservers, and OCI registries. It is complex as there is overlap between these targets, a concept of priorities and global/exclusive keyservers etc. This is likely a good area for a comprehensive rework.
@@ -67,11 +71,6 @@ Various portions of code in public `pkg/` areas still use `internal/` packages. 
 * **Go Module Conformance**
 https://github.com/sylabs/singularity/issues/81
 A major version offers an opportunity to revise the versioning approach, so that SingularityCE `pkg/` code can be called from other projects as expected of a go module.
-
-* **Transition to `nvidia-container-cli` / CDI as preferred GPU setup method**
-Perform GPU setup in containers using the `--nvccli` approach by default, if `nvidia-container-cli ` is available, using legacy binding as a fall-back or explicit config option. Requires fakeroot support above.
-
- This task was previously assigned for 3.10, but has been postponed to allow tracking changes to NVIDIA's projects, and adoption of CDI (container device interface). We will monitor the situation and time the transition in order that we can capture benefits, without repeated disruptive behavior / configuration changes.
 
 * **Rework fakeroot engine for nvccli compatibility**
 The hybrid fakeroot workflow creates / enters namespaces and performs container setup in an order that is not compatible with using the `nvidia-container-cli` binary for NVIDIA GPU setup. Rework the engine to permit this. May include removing Singularity's own subuid/gid mapping setup, to depend on the standard `newuidmap` / `newgidmap` tooling employed by other rootless runtimes, and SingularityCE in no-setuid mode.
