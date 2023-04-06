@@ -16,7 +16,7 @@ SingularityCE was created in May 2021 as a fork from the (then) hpcng/singularit
 
 The first SingularityCE release was 3.8.0, on May 26th 2021.
 
-The current SingularityCE release is 3.10.4, on Nov 10th 2022.
+The current SingularityCE release is 3.11.1, on Mar 14th 2023.
 
 This roadmap is regularly curated by Sylabs, but is open for edits by anyone! You can [create feature request issues](https://https://github.com/sylabs/singularity/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=) on the GitHub repository, or comment/edit the document here (use the HackMD button).
 
@@ -37,7 +37,7 @@ Background information covering the OCI / SIF work in SingularityCE 3.10 -> 4.0 
 
 ## 4.0 Features
 
-SingularityCE 4.0 is targeted for release in May-June 2022.
+SingularityCE 4.0 is targeted for release in Jul-Aug 2023.
 
 * **SIF Encapsulated OCI Images**
 Support encapsulation of native OCI data and configs in SIF. This will permit native OCI containers (not a translation to singularity images) to benefit from the performance (metadata) and portability advantages of the SIF single file format.
@@ -74,6 +74,15 @@ A major version offers an opportunity to revise the versioning approach, so that
 
 * **Rework fakeroot engine for nvccli compatibility**
 The hybrid fakeroot workflow creates / enters namespaces and performs container setup in an order that is not compatible with using the `nvidia-container-cli` binary for NVIDIA GPU setup. Rework the engine to permit this. May include removing Singularity's own subuid/gid mapping setup, to depend on the standard `newuidmap` / `newgidmap` tooling employed by other rootless runtimes, and SingularityCE in no-setuid mode.
+
+## 4.1 Features
+
+SingularityCE 4.1 is targeted for release in November 2023.
+
+The focus of SingularityCE 4.1 will be bugfix, performance, and functionality improvements related to the OCI mode.
+
+Additional roadmap items are under consideration. Please add your suggestions here, as this is an editable document via HackMD.
+
 
 ## Under Consideration
 
