@@ -2,6 +2,20 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/-EXJh1x7TvqCdRnmHIj_dA/badge)](https://hackmd.io/-EXJh1x7TvqCdRnmHIj_dA)
 
+## Retired - Please Use GitHub Discussions
+
+To encourage broader discussion of the roadmap and community calls, we have
+decided to use [GitHub
+Discussions](https://github.com/sylabs/singularity/discussions) at the
+SingularityCE repository.
+
+Please use:
+
+ * The [Roadmap Category](https://github.com/sylabs/singularity/discussions/categories/roadmap) for information and discussion about future SingularityCE releases.
+ * The [Community Call category](https://github.com/sylabs/singularity/discussions/categories/community-call) to find agendas, and suggest topics, for the monthly SingularityCE community calls.  
+ 
+-----
+
 ## 2023-03-02 12 noon ET
 
 Zoom: https://zoom.us/j/98830550629?pwd=ZENYK0hUUlBoSGZlTUl2WEdEa1FDUT09
