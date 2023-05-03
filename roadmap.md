@@ -2,6 +2,20 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/STKv0EPDRHSHEgFSZe9fxw/badge)](https://hackmd.io/STKv0EPDRHSHEgFSZe9fxw)
 
+## Retired - Please Use GitHub Discussions
+
+To encourage broader discussion of the roadmap and community calls, we have
+decided to use [GitHub
+Discussions](https://github.com/sylabs/singularity/discussions) at the
+SingularityCE repository.
+
+Please use:
+
+ * The [Roadmap Category](https://github.com/sylabs/singularity/discussions/categories/roadmap) for information and discussion about future SingularityCE releases.
+ * The [Community Call category](https://github.com/sylabs/singularity/discussions/categories/community-call) to find agendas, and suggest topics, for the monthly SingularityCE community calls.  
+ 
+-----
+
 - [Introduction](#Introduction)
 - [Development Cycle](#Development-Cycle)
 - [4.0 Features](#40-Features)
