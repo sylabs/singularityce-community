@@ -2,6 +2,20 @@
 
 [![hackmd-github-sync-badge](https://hackmd.io/KwPBiu0nQeO4MTX_0KHXWA/badge)](https://hackmd.io/KwPBiu0nQeO4MTX_0KHXWA)
 
+## Retired - Please Use GitHub Discussions
+
+To encourage broader discussion of the roadmap and community calls, we have
+decided to use [GitHub
+Discussions](https://github.com/sylabs/singularity/discussions) at the
+SingularityCE repository.
+
+Please use:
+
+ * The [Roadmap Category](https://github.com/sylabs/singularity/discussions/categories/roadmap) for information and discussion about future SingularityCE releases.
+ * The [Community Call category](https://github.com/sylabs/singularity/discussions/categories/community-call) to find agendas, and suggest topics, for the monthly SingularityCE community calls.  
+ 
+-----
+
 This repository contains documents, meeting minutes, etc. for the [SingularityCE](https://github.com/sylabs/singularity) user and developer community, as well as links to other spaces we use to communicate and collaborate.
 
 We use the [singularityce team space on HackMD](https://hackmd.io/team/singularityce) to collaboratively create and edit the markdown files in this repository. This lets multiple people work on a document in real-time. Each file contains a HackMD badge - please follow the link to edit the document, rather than creating pull requests on GitHub. Changes made in HackMD will be synced to GitHub at appropriate times.
